@@ -1,0 +1,19 @@
+.next__step--btn.primary {
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
+    padding: 1em;
+    color: white;
+    background-color: var(--purplish-blue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next__step--btn.secondary {
+    color: var(--cool-gray);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-bold);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

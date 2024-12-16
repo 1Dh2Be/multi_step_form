@@ -26,7 +26,6 @@ ul {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* padding: 1em; */
 }
 
 .progress_bar {
@@ -34,6 +33,10 @@ ul {
     width: 100%;
     height: 100%;
     position: relative;
+}
+
+.form-content {
+    height: 100%;
 }
 
 .list__info {
@@ -46,7 +49,6 @@ ul {
 }
 
 .step-number {
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +63,7 @@ ul {
     transition: all 0.3s ease;
 }
 
-.step-number:hover {
+.step-number.active {
     color: var(--marine-blue);
     background-color: var(--white);
 }

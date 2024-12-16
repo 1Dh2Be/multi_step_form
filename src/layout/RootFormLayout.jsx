@@ -1,9 +1,13 @@
+import { useForm } from "../pages/FormContext";
 import "./RootFormLayout.css"
 
 // Library/Component imports here
 import { Outlet } from "react-router";
 
 const RootFormLayout = () => {
+
+    const {currentStep} = useForm();
+
     return (
         <div className="form__bg">
             <div className="form">
@@ -16,28 +20,28 @@ const RootFormLayout = () => {
 
                         <ul className="list__info">
                             <li className="step__1" aria-current="step">
-                                <span className="step-number">1</span>
+                                <span className={`step-number ${currentStep == 1 ? "active" : ""}`}>1</span>
                                 <div className="step-content">
                                     <span className="step-label">STEP 1</span>
                                     <h2 className="step-title">YOUR INFO</h2>
                                 </div>
                             </li>
                             <li className="step__2">
-                                <span className="step-number">2</span>
+                                <span className={`step-number ${currentStep == 2 ? "active" : ""}`}>2</span>
                                 <div className="step-content">
                                     <span className="step-label">STEP 2</span>
                                     <h2 className="step-title">SELECT PLAN</h2>
                                 </div>
                             </li>
                             <li className="step__2">
-                                <span className="step-number">3</span>
+                                <span className={`step-number ${currentStep == 3 ? "active" : ""}`}>3</span>
                                 <div className="step-content">
                                     <span className="step-label">STEP 3</span>
                                     <h2 className="step-title">ADD-ONS</h2>
                                 </div>
                             </li>
                             <li className="step__2">
-                                <span className="step-number">4</span>
+                                <span className={`step-number ${currentStep == 4 ? "active" : ""}`}>4</span>
                                 <div className="step-content">
                                     <span className="step-label">STEP 4</span>
                                     <h2 className="step-title">SUMMARY</h2>

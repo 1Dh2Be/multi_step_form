@@ -24,3 +24,21 @@
 body {
   font-family: var(--font-family);
 }
+
+label {
+  font-size: 0.9rem;
+  color: var(--marine-blue);
+}
+
+
+input {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding: 0.7em;
+  border-radius: 5px;
+  border: 1px solid var(--cool-gray);
+}
+
+input:hover, input:focus {
+  outline: 1px solid var(--purplish-blue);
+}

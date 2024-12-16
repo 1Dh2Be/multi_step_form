@@ -1,6 +1,7 @@
 import './App.css'
 
 // Library imports here
+import { FormProvider } from './pages/FormContext.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 
 
@@ -9,6 +10,7 @@ import RootFormLayout from './layout/RootFormLayout.jsx'
 
 // Page imports here
 import FormStep1 from './pages/form-step1/FormStep1.jsx'
+import FormStep2 from './pages/form-step2/FormStep2.jsx'
 
 function App() {
 
@@ -18,14 +20,17 @@ function App() {
       element: <RootFormLayout/>,
       children: [
         {path: "step1", element: <FormStep1/>},
+        {path: "step2", element: <FormStep2/>},
       ]
     }
   ])
 
   return (
-    <div className='app'>
-      <RouterProvider router={router} />
-    </div>
+    <FormProvider>
+      <div className='app'>
+        <RouterProvider router={router} />
+      </div>
+    </FormProvider>
   )
 }
 
