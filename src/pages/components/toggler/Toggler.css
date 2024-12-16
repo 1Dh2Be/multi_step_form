@@ -1,0 +1,29 @@
+.billing__input {
+    opacity: 0;
+    position: absolute;
+}
+
+.toggle__slider {
+    position: relative;
+    display: block;
+    width: 3em;
+    height: 1.5em;
+    border-radius: 20px;
+    background-color: var(--marine-blue);
+}
+
+.toggle__slider::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--white);
+    border-radius: 50%;
+    top: 4px;
+    left: 3px;
+}
+
+.billing__input:checked + .toggle__slider::after{
+    transform: translateX(100%);
+}
