@@ -16,14 +16,15 @@
     position: absolute;
     display: block;
     content: "";
-    width: 12px;
-    height: 12px;
+    width: 0.9em;
+    height: 0.9em;
     background-color: var(--white);
     border-radius: 50%;
-    top: 4px;
-    left: 3px;
+    top: 0.3em;
+    left: 0.3em;
+    transition: all 0.3s ease;
 }
 
-.billing__input:checked + .toggle__slider::after{
-    transform: translateX(100%);
+.billing__input:checked + .toggle__slider::after {
+    transform: translateX(1.4em);
 }

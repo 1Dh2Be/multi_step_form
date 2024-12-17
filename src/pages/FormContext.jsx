@@ -6,9 +6,11 @@ export const FormProvider = ({ children }) => {
 
     const [currentStep, setCurrentStep] = useState(1);
 
+    const [isChecked, setIsChecked] = useState(false);
+
 
     return (
-        <FormContext.Provider value={{currentStep, setCurrentStep}}>
+        <FormContext.Provider value={{currentStep, setCurrentStep, isChecked, setIsChecked}}>
             {children}
         </FormContext.Provider>
     )

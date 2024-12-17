@@ -20,7 +20,7 @@ input[type="radio"]:checked + .plan__content {
 .plans {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 .plan__content:hover, .plan__content:checked {
@@ -33,6 +33,7 @@ input[type="radio"]:checked + .plan__content {
 }
 
 .plan__content {
+    position: relative;
     display: flex;
     gap: 1em;
     border: 1px solid var(--light-gray);
@@ -41,11 +42,40 @@ input[type="radio"]:checked + .plan__content {
     cursor: pointer;
 }
 
+.free__months--text {
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    /* transform: rotate(20deg); */
+    background-color: var(--purplish-blue);
+    color: var(--white);
+    font-size: 12px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+
 .billing__label {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.billing__label h4 {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.billing__label.not-checked h4:last-child{
+    opacity: 0.3;
+}
+
+.billing__label.is-checked h4:first-child{
+    opacity: 0.3;
 }
 
 .billing__toggler {
