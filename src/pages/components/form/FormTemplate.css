@@ -21,6 +21,7 @@
     left: 50%;
     transform: translateX(-50%);
     height: auto;
+    min-height: 400px;
     width: 90%;
     background-color: var(--white);
     border-radius: 10px;

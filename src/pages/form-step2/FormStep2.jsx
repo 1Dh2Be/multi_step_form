@@ -14,7 +14,7 @@ const FormStep2 = () => {
 
     const handleNextStep = () => {
       setCurrentStep(currentStep + 1)
-      navigate("/step2");
+      navigate("/step3");
     }
 
     const handleBackStep = () => {
@@ -29,11 +29,11 @@ const FormStep2 = () => {
             description="You have the option of monthly or yearly billing."
             onNextStep={handleNextStep}
             onBackStep={handleBackStep}
-            showBackButton= {true}
+            showBackButton={true}
         >
           <div className="plans">
             <label className="plan">
-              <input type="radio" name="plan" value="arcade" defaultChecked />
+              <input className="plan__input" type="radio" name="plan" value="arcade" defaultChecked />
               <div className="plan__content">
                 <span className="icon"><img src="src/assets/images/icon-arcade.svg" alt="Arcade plan icon" /></span>
                 {isChecked? (
@@ -52,7 +52,7 @@ const FormStep2 = () => {
             </label>
 
             <label className="plan">
-              <input type="radio" name="plan" value="advanced" />
+              <input className="plan__input" type="radio" name="plan" value="advanced" />
               <div className="plan__content">
                 <span className="icon"><img src="src/assets/images/icon-advanced.svg" alt="Advanced plan icon" /></span>
                 {isChecked? (
@@ -71,7 +71,7 @@ const FormStep2 = () => {
             </label>
 
             <label className="plan">
-              <input type="radio" name="plan" value="pro" />
+              <input className="plan__input" type="radio" name="plan" value="pro" />
               <div className="plan__content">
                 <span className="icon"><img src="src/assets/images/icon-pro.svg" alt="Pro plan icon" /></span>
                 {isChecked? (

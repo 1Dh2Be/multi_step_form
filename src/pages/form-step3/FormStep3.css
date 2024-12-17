@@ -1,0 +1,43 @@
+.add__on--h3 {
+    font-size: 14px;
+}
+
+.add__on--p {
+    white-space: nowrap;
+    font-size: 11px;
+}
+
+.add__ons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.add__ons--row {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid var(--cool-gray);
+    border-radius: 5px;
+    padding: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add__ons--row:has(input[type=checkbox]:checked) {
+    border-color: var(--purplish-blue);
+    background-color: hsla(243, 100%, 62%, 0.1);
+}
+
+.add__on {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex: 1;
+}
+
+.add__on--price {
+    color: var(--purplish-blue);
+    font-weight: 600;
+    margin-left: auto;
+}

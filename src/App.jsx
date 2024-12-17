@@ -11,6 +11,7 @@ import RootFormLayout from './layout/RootFormLayout.jsx'
 // Page imports here
 import FormStep1 from './pages/form-step1/FormStep1.jsx'
 import FormStep2 from './pages/form-step2/FormStep2.jsx'
+import FormStep3 from './pages/form-step3/FormStep3.jsx'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       children: [
         {path: "step1", element: <FormStep1/>},
         {path: "step2", element: <FormStep2/>},
+        {path: "step3", element: <FormStep3/>},
       ]
     }
   ])

@@ -1,9 +1,9 @@
-input[type="radio"] {
+.plan__input {
     opacity: 0;
     position: absolute;
 }
 
-input[type="radio"]:checked + .plan__content {
+.plan__input:checked + .plan__content {
     border-color: var(--purplish-blue);
     background-color: hsla(243, 100%, 62%, 0.1);
 
@@ -46,7 +46,6 @@ input[type="radio"]:checked + .plan__content {
     position: absolute;
     right: 5px;
     top: 15px;
-    /* transform: rotate(20deg); */
     background-color: var(--purplish-blue);
     color: var(--white);
     font-size: 12px;
