@@ -71,3 +71,85 @@ ul {
 .step-content {
     display: none;
 }
+
+@media (min-width:900px) {
+
+    /* ============================= */
+    /* Background Section            */
+    /* ============================= */
+    .form__bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--light-blue);
+    }
+
+    /* ============================= */
+    /* Form Section                  */
+    /* ============================= */
+    .form {
+        background-color: var(--white);
+        width: min(950px, 90%);
+        height: min(550px, 70%);
+        margin: 0 auto;
+        padding: 1em;
+        border-radius: 20px;
+    }
+
+    /* ============================= */
+    /* Form Container Section        */
+    /* ============================= */
+    .form__container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* ============================= */
+    /* Progress Bar (Aside) Section  */
+    /* ============================= */
+    .progress_bar {
+        border-radius: 20px;
+        flex: 35;
+    }
+
+    .list__info {
+        gap: 1.5rem;
+        top: 40px;
+        left: 25px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        transform: none;
+    }
+
+    .list__step {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .step-content {
+        display: block;
+    }
+
+    .step-label {
+        font-size: 0.9rem;
+        color: var(--white);
+    }
+
+    .step-title {
+        font-size: 1rem;
+        color: var(--white);
+    }
+
+    .bg__picture > img{
+        border-radius: 15px;
+    }
+
+    /* ============================= */
+    /* Main Content Section          */
+    /* ============================= */
+    .form-content {
+        flex: 65;
+    }
+}

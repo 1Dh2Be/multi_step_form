@@ -3,6 +3,7 @@
 }
 
 .add__on--p {
+    color: var(--cool-gray);
     white-space: nowrap;
     font-size: 11px;
 }
@@ -24,6 +25,11 @@
     transition: all 0.2s ease;
 }
 
+.add__ons--row:hover {
+    border-color: var(--purplish-blue);
+    background-color: hsla(243, 100%, 62%, 0.1);
+}
+
 .add__ons--row:has(input[type=checkbox]:checked) {
     border-color: var(--purplish-blue);
     background-color: hsla(243, 100%, 62%, 0.1);
@@ -40,4 +46,19 @@
     color: var(--purplish-blue);
     font-weight: 600;
     margin-left: auto;
+}
+
+@media (min-width: 900px) {
+
+    .add__on--h3 {
+        font-size: clamp(1rem, 3vw, 1rem);
+    }
+
+    .add__on--p {
+        font-size: clamp(0.8rem, 3vw, 0.9rem);
+    }
+
+    .add__ons {
+        gap: 1em;
+    }
 }

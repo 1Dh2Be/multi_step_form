@@ -49,3 +49,28 @@
 .wrapper__actions.spacer {
     justify-content: space-between;
 }
+
+@media (min-width:900px) {
+
+    .wrapper__container {
+        background-color: var(--white);
+    }
+
+    .wrapper__content {
+        position: static;
+        transform: none;
+        margin-left: 3em;
+    }
+
+    .wrapper__body {
+        margin-top: 1.5em;
+    }
+
+    .wrapper__actions {
+        padding: 1.5em;
+    }
+
+    .next__step--btn.secondary {
+        margin-left: 3.7em;
+    }
+}

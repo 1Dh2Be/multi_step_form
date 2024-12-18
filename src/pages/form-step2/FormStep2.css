@@ -86,3 +86,23 @@
     background-color: hsla(243, 100%, 62%, 0.1);
     cursor: pointer;
 }
+
+@media (min-width:900px) {
+    .plans {
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .plan {
+        flex: 1;
+    }
+
+    .plan__content {
+        flex-direction: column;
+        gap: 2.5em;
+    }
+
+    .free__months--text {
+        padding: 3px 3px;
+    }
+}

@@ -30,8 +30,8 @@ const FormStep1 = () => {
                 }}
             >
                 {() => (
-                    <Form className="form">
-                        <div className="form-group">
+                    <Form className="formik__form">
+                        <div className="form__group">
                             <label htmlFor="name">Name</label>
                             <input
                                 type="text"
@@ -40,7 +40,7 @@ const FormStep1 = () => {
                             />
                         </div>
 
-                        <div className="form-group">
+                        <div className="form__group">
                             <label htmlFor="email">Email Address</label>
                             <input
                                 type="email"
@@ -49,7 +49,7 @@ const FormStep1 = () => {
                             />
                         </div>
 
-                        <div className="form-group">
+                        <div className="form__group">
                             <label htmlFor="phone">Phone Number</label>
                             <input
                                 type="number"
