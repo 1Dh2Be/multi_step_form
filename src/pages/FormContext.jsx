@@ -6,7 +6,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 
 const INITIAL_FORM_STATE = {
     step1: { name: "", email: "", phone: "" },
-    step2: { plan: "", billingCycle: "monthly" },
+    step2: { plan: "arcade", billingCycle: "monthly" },
     step3: { addons: [] },
     step4: { summary: {} }
 };
@@ -23,7 +23,7 @@ export const FormProvider = ({ children }) => {
 
     const [formData, setFormData] = useState(() => {
         const savedFormData = localStorage.getItem('formData');
-        return savedFormData ? JSON.parse(savedFormData) : INITIAL_FORM_STATE; // Fixed JSON parsing error (JSON.parseInt -> JSON.parse)
+        return savedFormData ? JSON.parse(savedFormData) : INITIAL_FORM_STATE;
     });
     
     //       FORM DATA METHODS        //
@@ -32,8 +32,8 @@ export const FormProvider = ({ children }) => {
         setFormData(prev => ({
             ...prev,
             [step]: {
-                ...prev[step],  // Keep the existing fields for the step
-                [fieldName]: value // Update only the specific field
+                ...prev[step], 
+                [fieldName]: value
             }
         }));
     };

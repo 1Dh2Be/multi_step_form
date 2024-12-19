@@ -4,10 +4,11 @@ import { useForm } from "../../FormContext"
 
 const Toggler = () => {
 
-    const {isChecked, setIsChecked} = useForm();
+    const {isChecked, setIsChecked, updateFormData} = useForm();
 
     const handleToggle = () => {
         setIsChecked(!isChecked)
+        isChecked? updateFormData("step2", "billingCycle", "monthly"): updateFormData("step2", "billingCycle", "yearly")
     }
 
     return (
