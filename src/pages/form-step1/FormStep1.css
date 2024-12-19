@@ -15,6 +15,21 @@
 }
 
 
+
+.input__text {
+    display: flex;
+    justify-content: space-between ;
+}
+
+#error {
+    border: 1px solid red;
+}
+
+#error:hover, #error:focus {
+    outline: 1px solid red;
+}
+
+
 /* NORMAL/BIG PHONES LAYOUT HERE */
 @media (min-height:740px) {
     .form__group {

@@ -7,7 +7,8 @@ const FormTemplate = ({
         children,
         onNextStep,
         onBackStep,
-        showBackButton = false
+        showBackButton = false,
+        isFormValid = false
 }) => {
     return (
         <section className="wrapper">
@@ -29,7 +30,12 @@ const FormTemplate = ({
                 {showBackButton && (
                     <Button onClick={onBackStep} variant="secondary">Go Back</Button>
                 )}
-                <Button onClick={onNextStep}>Next Step</Button>
+                <Button 
+                    onClick={onNextStep}
+                    disabled={!isFormValid}
+                >
+                    Next Step
+                </Button>
             </div>
         </section>
     )

@@ -17,3 +17,10 @@
     background-color: transparent;
     cursor: pointer;
 }
+
+.next__step--btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #ccc !important; /* Use !important if needed to override other styles */
+    pointer-events: none; /* Prevents any hover effects */
+}
