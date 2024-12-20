@@ -8,9 +8,9 @@ const INITIAL_FORM_STATE = {
     step1: { name: "", email: "", phone: "" },
     step2: { plan: "arcade", billingCycle: "monthly" },
     step3: { addons: {
-        "online-service": 0,
-        "extra-storage": 0,
-        "custom-profile": 0
+        "Online-service": 0,
+        "Extra-storage": 0,
+        "Custom-profile": 0
     }},
     step4: { summary: {} }
 };
@@ -33,13 +33,29 @@ export const FormProvider = ({ children }) => {
     //       FORM DATA METHODS        //
 
     const updateFormData = (step, fieldName, value) => {
-        setFormData(prev => ({
-            ...prev,
-            [step]: {
-                ...prev[step],
-                [fieldName]: value
+        setFormData(prev => {
+            if (step === 'step3') {
+                // Special handling for addons object
+                return {
+                    ...prev,
+                    step3: {
+                        ...prev.step3,
+                        addons: {
+                            ...prev.step3.addons,
+                            [fieldName]: value
+                        }
+                    }
+                };
             }
-        }));
+            // Regular handling for other fields
+            return {
+                ...prev,
+                [step]: {
+                    ...prev[step],
+                    [fieldName]: value
+                }
+            };
+        });
     };
 
     const resetForm = () => {

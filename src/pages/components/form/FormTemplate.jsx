@@ -4,6 +4,7 @@ import Button from "../button/Button"
 const FormTemplate = ({
         title,
         description,
+        buttonTitle,
         children,
         onNextStep,
         onBackStep,
@@ -34,7 +35,7 @@ const FormTemplate = ({
                     onClick={onNextStep}
                     disabled={!isFormValid}
                 >
-                    Next Step
+                    {buttonTitle}
                 </Button>
             </div>
         </section>

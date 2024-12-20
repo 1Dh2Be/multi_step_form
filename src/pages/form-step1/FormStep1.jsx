@@ -22,8 +22,6 @@ const FormStep1 = () => {
         updateFormData('step1', e.target.name, e.target.value);
     }
 
-    console.log(formData)
-
     return (
         <Formik
             initialValues={{
@@ -60,6 +58,7 @@ const FormStep1 = () => {
                     <FormTemplate
                         title="Personal info"
                         description="Please provide your name, email address, and phone number."
+                        buttonTitle="Next Step"
                         onNextStep={handleNextStep}
                         isFormValid={buttonState}
                     >

@@ -30,6 +30,7 @@ const FormStep2 = () => {
       <FormTemplate
           title="Select your plan"
           description="You have the option of monthly or yearly billing."
+          buttonTitle="Next Step"
           onNextStep={handleNextStep}
           onBackStep={handleBackStep}
           showBackButton={true}

@@ -7,6 +7,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
 .next__step--btn.secondary {
@@ -23,4 +24,8 @@
     cursor: not-allowed;
     background-color: #ccc !important; /* Use !important if needed to override other styles */
     pointer-events: none; /* Prevents any hover effects */
+}
+
+.next__step--btn.primary:hover {
+    opacity: 0.8;
 }
