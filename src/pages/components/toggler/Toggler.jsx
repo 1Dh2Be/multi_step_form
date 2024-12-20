@@ -1,4 +1,3 @@
-import { useState } from "react"
 import "./Toggler.css"
 import { useForm } from "../../FormContext"
 
@@ -18,6 +17,7 @@ const Toggler = () => {
                 type="checkbox"
                 id="billing__toggler"
                 className="billing__input"
+                checked={isChecked}
             />
             <span className="toggle__slider"></span>
         </>

@@ -23,6 +23,8 @@ const FormStep1 = () => {
         updateFormData('step1', e.target.name, e.target.value);
     }
 
+    console.log(formData)
+
     return (
         <Formik
             initialValues={{

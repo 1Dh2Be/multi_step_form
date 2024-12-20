@@ -18,26 +18,26 @@ export const FormContext = createContext(null);
 //        FORM PROVIDER           //
 
 export const FormProvider = ({ children }) => {
-    
+
     //      FORM DATA STATE           //
 
     const [formData, setFormData] = useState(() => {
         const savedFormData = localStorage.getItem('formData');
         return savedFormData ? JSON.parse(savedFormData) : INITIAL_FORM_STATE;
     });
-    
+
     //       FORM DATA METHODS        //
 
     const updateFormData = (step, fieldName, value) => {
         setFormData(prev => ({
             ...prev,
             [step]: {
-                ...prev[step], 
+                ...prev[step],
                 [fieldName]: value
             }
         }));
     };
-    
+
 
     const resetForm = () => {
         setFormData(INITIAL_FORM_STATE);
@@ -58,16 +58,23 @@ export const FormProvider = ({ children }) => {
         const savedStep = localStorage.getItem('currentStep');
         return savedStep ? parseInt(savedStep) : 1;
     });
-    
+
     useEffect(() => {
         localStorage.setItem('currentStep', currentStep);
     }, [currentStep]);
-    
+
     //      CHECKBOX STATE            //
 
-    const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState(() => {
+        const savedCheckedValue = localStorage.getItem('isChecked')
+        return savedCheckedValue? parseInt(savedCheckedValue) : false
+    });
 
-        
+    useEffect(() => {
+        localStorage.setItem('isChecked', isChecked)
+    }, [isChecked])
+
+
     //      BUTTON STATE            //
     const [buttonState, setButtonState] = useState(() => {
         const savedState = localStorage.getItem('buttonState')
@@ -77,18 +84,18 @@ export const FormProvider = ({ children }) => {
     useEffect(() => {
         localStorage.setItem('buttonState', buttonState)
     }, [buttonState])
-    
+
     //       CONTEXT PROVIDER         //
 
     return (
-        <FormContext.Provider 
-            value={{ 
-                formData, 
-                updateFormData, 
-                resetForm, 
-                currentStep, 
-                setCurrentStep, 
-                isChecked, 
+        <FormContext.Provider
+            value={{
+                formData,
+                updateFormData,
+                resetForm,
+                currentStep,
+                setCurrentStep,
+                isChecked,
                 setIsChecked,
                 buttonState,
                 setButtonState
@@ -103,10 +110,10 @@ export const FormProvider = ({ children }) => {
 
 export const useForm = () => {
     const context = useContext(FormContext);
-    
+
     if (!context) {
         throw new Error("useForm must be used within a FormProvider");
     }
-    
+
     return context;
 };

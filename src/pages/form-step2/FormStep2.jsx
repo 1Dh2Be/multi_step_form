@@ -27,6 +27,7 @@ const FormStep2 = () => {
     };
 
   console.log(formData)
+  console.log(isChecked)
 
   return (
       <FormTemplate
@@ -39,7 +40,7 @@ const FormStep2 = () => {
       >
         <div className="plans">
           <label className="plan">
-            <input className="plan__input" type="radio" name="plan" value="arcade" onChange={handlePlanChange} defaultChecked />
+            <input className="plan__input" type="radio" name="plan" value="arcade" onChange={handlePlanChange} checked={formData.step2.plan === "arcade"} />
             <div className="plan__content">
               <span className="icon"><img src="src/assets/images/icon-arcade.svg" alt="Arcade plan icon" /></span>
               {isChecked? (
@@ -58,7 +59,7 @@ const FormStep2 = () => {
           </label>
 
           <label className="plan">
-            <input className="plan__input" type="radio" name="plan" value="advanced" onChange={handlePlanChange}/>
+            <input className="plan__input" type="radio" name="plan" value="advanced" onChange={handlePlanChange} checked={formData.step2.plan === "advanced"}/>
             <div className="plan__content">
               <span className="icon"><img src="src/assets/images/icon-advanced.svg" alt="Advanced plan icon" /></span>
               {isChecked? (
@@ -77,7 +78,7 @@ const FormStep2 = () => {
           </label>
 
           <label className="plan">
-            <input className="plan__input" type="radio" name="plan" value="pro" onChange={handlePlanChange}/>
+            <input className="plan__input" type="radio" name="plan" value="pro" onChange={handlePlanChange} checked={formData.step2.plan === "pro"}/>
             <div className="plan__content">
               <span className="icon"><img src="src/assets/images/icon-pro.svg" alt="Pro plan icon" /></span>
               {isChecked? (

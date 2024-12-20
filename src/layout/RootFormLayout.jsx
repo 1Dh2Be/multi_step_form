@@ -23,7 +23,7 @@ const StepList = memo(({ currentStep }) => {
 
   const RootFormLayout = () => {
     const { currentStep } = useForm();
-  
+
     return (
       <div className="form__bg">
         <div className="form">
@@ -33,11 +33,11 @@ const StepList = memo(({ currentStep }) => {
                 <source srcSet="src/assets/images/bg-sidebar-mobile.svg" media="(max-width: 500px)" />
                 <img src="src/assets/images/bg-sidebar-desktop.svg" alt="side bar background image" />
               </picture>
-  
+
               {/* Use memoized StepList */}
               <StepList currentStep={currentStep} />
             </aside>
-  
+
             <main className="form-content">
               <Outlet />
             </main>
