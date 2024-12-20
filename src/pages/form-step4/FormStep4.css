@@ -55,7 +55,7 @@
 }
 
 .addon__name {
-    font-size: clamp(1rem, 3vw, 1.1rem);
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
     font-weight: var(--font-weight-medium);
     color: var(--cool-gray);
 }
