@@ -7,7 +7,11 @@ import { createContext, useContext, useState, useEffect } from "react";
 const INITIAL_FORM_STATE = {
     step1: { name: "", email: "", phone: "" },
     step2: { plan: "arcade", billingCycle: "monthly" },
-    step3: { addons: [] },
+    step3: { addons: {
+        "online-service": 0,
+        "extra-storage": 0,
+        "custom-profile": 0
+    }},
     step4: { summary: {} }
 };
 
@@ -37,7 +41,6 @@ export const FormProvider = ({ children }) => {
             }
         }));
     };
-
 
     const resetForm = () => {
         setFormData(INITIAL_FORM_STATE);

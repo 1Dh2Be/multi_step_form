@@ -30,7 +30,7 @@ const FormTemplate = ({
                 {showBackButton && (
                     <Button onClick={onBackStep} variant="secondary">Go Back</Button>
                 )}
-                <Button 
+                <Button
                     onClick={onNextStep}
                     disabled={!isFormValid}
                 >

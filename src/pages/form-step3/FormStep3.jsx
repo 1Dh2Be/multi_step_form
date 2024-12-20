@@ -30,6 +30,7 @@ const FormStep3 = () => {
             onNextStep={handleNextStep}
             onBackStep={handleBackStep}
             showBackButton={true}
+            isFormValid={true}
         >
             <div className="add__ons">
                 <label className="add__ons--row">
@@ -64,7 +65,7 @@ const FormStep3 = () => {
 
                 <label className="add__ons--row">
                     <div className="add__on">
-                        <CheckBox name="add__on--3" value="online service"/>
+                        <CheckBox name="add__on--3" value="custom-profile"/>
                         <div>
                             <h3 className="add__on--h3">Customizable profile</h3>
                             <p className="add__on--p">Custom theme on your profile</p>

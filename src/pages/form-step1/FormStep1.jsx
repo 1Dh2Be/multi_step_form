@@ -1,7 +1,6 @@
 import "./FormStep1.css"
 
 // Component/Hooks imports
-// pages/FormStep1.jsx
 import { useNavigate } from "react-router"
 import { Formik, Form, ErrorMessage } from "formik"
 import { useForm } from "../FormContext"
@@ -14,7 +13,7 @@ const FormStep1 = () => {
     const navigate = useNavigate();
 
     const handleNextStep = () => {
-        setCurrentStep(currentStep + 1)
+        setCurrentStep(1 + 1)
         navigate("/step2");
     }
 
@@ -35,19 +34,19 @@ const FormStep1 = () => {
             validationSchema={basicSchema}
         >
             {({
-                errors, 
-                touched, 
-                handleChange, 
-                handleBlur, 
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
                 values,
                 isValid,
             }) => {
 
                 // Check if form is valid and all fields have values
-                const isFormValid = 
-                isValid && 
-                values.name && 
-                values.email && 
+                const isFormValid =
+                isValid &&
+                values.name &&
+                values.email &&
                 values.phone &&
                 Object.keys(errors).length === 0;
 
@@ -68,10 +67,10 @@ const FormStep1 = () => {
                             <div className="form__group">
                                 <div className="input__text">
                                     <label htmlFor="name">Name</label>
-                                    <ErrorMessage 
-                                        name="name" 
-                                        component="div" 
-                                        style={{ color: "red", fontSize: "0.9rem" }} 
+                                    <ErrorMessage
+                                        name="name"
+                                        component="div"
+                                        style={{ color: "red", fontSize: "0.9rem" }}
                                     />
                                 </div>
                                 <input
@@ -88,10 +87,10 @@ const FormStep1 = () => {
                             <div className="form__group">
                                 <div className="input__text">
                                     <label htmlFor="email">Email Address</label>
-                                    <ErrorMessage 
-                                        name="email" 
-                                        component="div" 
-                                        style={{ color: "red", fontSize: "0.9rem" }} 
+                                    <ErrorMessage
+                                        name="email"
+                                        component="div"
+                                        style={{ color: "red", fontSize: "0.9rem" }}
                                     />
                                 </div>
                                 <input
@@ -108,10 +107,10 @@ const FormStep1 = () => {
                             <div className="form__group">
                                 <div className="input__text">
                                     <label htmlFor="phone">Phone Number</label>
-                                    <ErrorMessage 
-                                        name="phone" 
-                                        component="div" 
-                                        style={{ color: "red", fontSize: "0.9rem"}} 
+                                    <ErrorMessage
+                                        name="phone"
+                                        component="div"
+                                        style={{ color: "red", fontSize: "0.9rem"}}
                                     />
                                 </div>
                                 <input

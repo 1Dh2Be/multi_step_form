@@ -26,9 +26,6 @@ const FormStep2 = () => {
       updateFormData("step2", "plan", e.target.value);
     };
 
-  console.log(formData)
-  console.log(isChecked)
-
   return (
       <FormTemplate
           title="Select your plan"
