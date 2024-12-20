@@ -10,6 +10,8 @@ const Toggler = () => {
         isChecked? updateFormData("step2", "billingCycle", "monthly"): updateFormData("step2", "billingCycle", "yearly")
     }
 
+    console.log(isChecked)
+
     return (
         <>
             <input
