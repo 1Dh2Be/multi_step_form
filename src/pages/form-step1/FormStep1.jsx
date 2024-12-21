@@ -13,7 +13,7 @@ const FormStep1 = () => {
     const navigate = useNavigate();
 
     const handleNextStep = () => {
-        setCurrentStep(1 + 1)
+        setCurrentStep(currentStep + 1)
         navigate("/step2");
     }
 

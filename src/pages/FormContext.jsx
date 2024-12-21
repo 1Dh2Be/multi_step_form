@@ -63,6 +63,7 @@ export const FormProvider = ({ children }) => {
         setCurrentStep(1);
         localStorage.removeItem('formData');
         localStorage.removeItem('currentStep');
+        localStorage.removeItem('isChecked');
     };
 
     //     FORM DATA PERSISTENCE      //

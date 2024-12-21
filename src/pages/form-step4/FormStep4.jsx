@@ -46,7 +46,8 @@ const FormStep4 = () => {
 
     const handleFormSubmit = () => {
         resetForm();
-        navigate("/step1")
+        setCurrentStep(4)
+        navigate("/confirmation")
     }
 
     const planPrice = PLAN_PRICE[formData.step2.plan][formData.step2.billingCycle];
