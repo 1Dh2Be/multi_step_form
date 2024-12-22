@@ -1,8 +1,13 @@
-import { useEffect } from "react";
-import { useForm } from "../FormContext";
+//Style import
 import "./FormConfirmation.css"
 
+//Component/Libraries import
+import { useEffect } from "react";
+import { useForm } from "../FormContext";
 import { useNavigate } from "react-router";
+
+// Icon Import
+import thankYou from"../../assets/images/icon-thank-you.svg"
 
 
 const FormConfirmation = () => {
@@ -16,7 +21,6 @@ const FormConfirmation = () => {
             setCurrentStep(1)
         }, 10000); // 10000 milliseconds = 10 seconds
 
-        // Cleanup function to clear the timeout if the component unmounts
         return () => clearTimeout(timer);
     }, [navigate]);
 
@@ -27,7 +31,7 @@ const FormConfirmation = () => {
                 <div className="confirmation__wrapper--content">
                     <header className="confirmation__wrapper--header">
                         <div className="confirmation__content--image">
-                            <img className="confirmation__img" src="src/assets/images/icon-thank-you.svg" alt="Confirmation icon" />
+                            <img className="confirmation__img" src={thankYou} alt="Confirmation icon" />
                         </div>
                         <h1 className="confirmation__wrapper--title">Thank you!</h1>
                         <p className="confirmation__wrapper--description">

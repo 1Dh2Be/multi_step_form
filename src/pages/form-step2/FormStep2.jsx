@@ -1,10 +1,16 @@
+// Style import
 import "./FormStep2.css"
 
-
+// Components/Libraries imports
 import { useNavigate } from "react-router";
 import { useForm } from "../FormContext";
 import FormTemplate from "../components/form/FormTemplate";
 import Toggler from "../components/toggler/Toggler";
+
+// Icon imports
+import arcadeIcon from "../../assets/images/icon-arcade.svg";
+import advancedIcon from "../../assets/images/icon-advanced.svg";
+import proIcon from "../../assets/images/icon-pro.svg";
 
 
 const FormStep2 = () => {
@@ -40,7 +46,7 @@ const FormStep2 = () => {
           <label className="plan">
             <input className="plan__input" type="radio" name="plan" value="arcade" onChange={handlePlanChange} checked={formData.step2.plan === "arcade"} />
             <div className="plan__content">
-              <span className="icon"><img src="src/assets/images/icon-arcade.svg" alt="Arcade plan icon" /></span>
+              <span className="icon"><img src={arcadeIcon} alt="Arcade plan icon" /></span>
               {isChecked? (
                 <div>
                   <h3>Arcade</h3>
@@ -59,7 +65,7 @@ const FormStep2 = () => {
           <label className="plan">
             <input className="plan__input" type="radio" name="plan" value="advanced" onChange={handlePlanChange} checked={formData.step2.plan === "advanced"}/>
             <div className="plan__content">
-              <span className="icon"><img src="src/assets/images/icon-advanced.svg" alt="Advanced plan icon" /></span>
+              <span className="icon"><img src={advancedIcon} alt="Advanced plan icon" /></span>
               {isChecked? (
                 <div>
                   <h3>Advanced</h3>
@@ -78,7 +84,7 @@ const FormStep2 = () => {
           <label className="plan">
             <input className="plan__input" type="radio" name="plan" value="pro" onChange={handlePlanChange} checked={formData.step2.plan === "pro"}/>
             <div className="plan__content">
-              <span className="icon"><img src="src/assets/images/icon-pro.svg" alt="Pro plan icon" /></span>
+              <span className="icon"><img src={proIcon} alt="Pro plan icon" /></span>
               {isChecked? (
                 <div>
                   <h3>Pro</h3>

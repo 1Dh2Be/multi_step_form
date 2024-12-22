@@ -1,11 +1,14 @@
-import { memo } from "react";
-import { useForm } from "../pages/FormContext";
+//Style import
 import "./RootFormLayout.css"
-import bgSidebarMobile from '../assets/images/bg-sidebar-mobile.svg';
-import bgSidebarDesktop from '../assets/images/bg-sidebar-desktop.svg';
+
+//Image bg import
+import bgSidebarMobile from "../assets/images/bg-sidebar-mobile.svg";
+import bgSidebarDesktop from "../assets/images/bg-sidebar-desktop.svg";
 
 // Library/Component imports here
 import { Outlet } from "react-router";
+import { memo } from "react";
+import { useForm } from "../pages/FormContext";
 
 const StepList = memo(({ currentStep }) => {
     return (
