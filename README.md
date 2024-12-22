@@ -58,7 +58,8 @@ Feel free to fork this project and submit pull requests. You can also open issue
 
 ## 📫 Contact
 
-Mimoun - [My LinkeDin](www.linkedin.com/in/mimoun-atmani)
+My LinkedIn: [Mimoun Atmani](https://www.linkedin.com/in/mimoun-atmani)
+
 
 ## 🙏 Acknowledgments
 
