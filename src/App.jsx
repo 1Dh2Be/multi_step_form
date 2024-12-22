@@ -22,6 +22,7 @@ function App() {
       path: "/",
       element: <RootFormLayout/>,
       children: [
+        {index: true, element: <FormStep1/>},
         {path: "step1", element: <FormStep1/>},
         {path: "step2", element: <FormStep2/>},
         {path: "step3", element: <FormStep3/>},
