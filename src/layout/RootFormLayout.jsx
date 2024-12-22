@@ -1,6 +1,8 @@
 import { memo } from "react";
 import { useForm } from "../pages/FormContext";
 import "./RootFormLayout.css"
+import bgSidebarMobile from '../assets/images/bg-sidebar-mobile.svg';
+import bgSidebarDesktop from '../assets/images/bg-sidebar-desktop.svg';
 
 // Library/Component imports here
 import { Outlet } from "react-router";
@@ -30,8 +32,8 @@ const StepList = memo(({ currentStep }) => {
           <div className="form__container">
             <aside className="progress_bar" role="progressbar" aria-label="Step Progress">
               <picture className="bg__picture">
-                <source srcSet="src/assets/images/bg-sidebar-mobile.svg" media="(max-width: 500px)" />
-                <img src="src/assets/images/bg-sidebar-desktop.svg" alt="side bar background image" />
+                <source srcSet={bgSidebarMobile} media="(max-width: 500px)" />
+                <img src={bgSidebarDesktop} alt="side bar background image" />
               </picture>
 
               {/* Use memoized StepList */}
