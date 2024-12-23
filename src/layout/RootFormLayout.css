@@ -90,7 +90,7 @@ ul {
     .form {
         background-color: var(--white);
         width: min(950px, 90%);
-        height: min(550px, 70%);
+        height: min(580px, 80%);
         margin: 0 auto;
         padding: 1em;
         border-radius: 20px;

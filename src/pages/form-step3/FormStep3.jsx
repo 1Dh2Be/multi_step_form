@@ -22,8 +22,6 @@ const FormStep3 = () => {
       navigate("/step2");
     }
 
-    console.log(formData.step3.addons)
-
     return (
         <FormTemplate
             title="Pick add-ons"

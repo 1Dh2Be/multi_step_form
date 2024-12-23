@@ -35,7 +35,7 @@ const StepList = memo(({ currentStep }) => {
           <div className="form__container">
             <aside className="progress_bar" role="progressbar" aria-label="Step Progress">
               <picture className="bg__picture">
-                <source srcSet={bgSidebarMobile} media="(max-width: 500px)" />
+                <source srcSet={bgSidebarMobile} media="(max-width: 900px)" />
                 <img src={bgSidebarDesktop} alt="side bar background image" />
               </picture>
 
