@@ -38,7 +38,7 @@ git clone git@github.com:1Dh2Be/multi_step_form.git
 npm install
 
 # Run development server
-npm start
+npm run dev
 ```
 
 ## 🌟 Learning Highlights
