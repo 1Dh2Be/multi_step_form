@@ -1,6 +1,6 @@
 # Multi-Step Subscription Form
 
-A dynamic subscription form built with React, showcasing modern front-end development practices and clean UI design. This project is part of my self-taught journey to become a front-end engineer.
+This is a dynamic subscription form built with React and Vite, showcasing modern front-end development practices and clean UI design. Currently 3 months into my self-taught journey to become a front-end engineer.
 
 ## 🔴 Live Demo
 
