@@ -1,54 +1,51 @@
 /* Layout */
 .formik__form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
 }
 
 .form__group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__group > label {
-    font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
 }
-
-
 
 .input__text {
-    display: flex;
-    justify-content: space-between ;
+  display: flex;
+  justify-content: space-between;
 }
 
-#error {
-    border: 1px solid red;
+.error {
+  border: 1px solid red;
 }
 
-#error:hover, #error:focus {
-    outline: 1px solid red;
+.error:hover,
+.error:focus {
+  outline: 1px solid red;
 }
-
 
 /* NORMAL/BIG PHONES LAYOUT HERE */
-@media (min-height:740px) {
-    .form__group {
-        gap: 0.5em;
-    }
+@media (min-height: 740px) {
+  .form__group {
+    gap: 0.5em;
+  }
 
-    .form__group > label {
-        font-size: clamp(0.9rem, 3vw, 1rem);
-    }
+  .form__group > label {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+  }
 
-    .form__group > input {
-        font-size: 1rem;
-    }
+  .form__group > input {
+    font-size: 1rem;
+  }
 }
 
-
 /* DESKTOP LAYOUT HERE*/
-@media (min-width:900px) {
-    .form {
-        margin: 0;
-    }
+@media (min-width: 900px) {
+  .form {
+    margin: 0;
+  }
 }

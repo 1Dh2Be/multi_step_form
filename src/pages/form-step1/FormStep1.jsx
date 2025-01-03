@@ -55,7 +55,8 @@ const FormStep1 = () => {
                   />
                 </div>
                 <input
-                  id={`${errors.name && touched.name ? "error" : ""}`}
+                  id="name"
+                  className={`${errors.name && touched.name ? "error" : ""}`}
                   type="text"
                   name="name"
                   placeholder="e.g. Mimoun"
@@ -75,7 +76,8 @@ const FormStep1 = () => {
                   />
                 </div>
                 <input
-                  id={`${errors.email && touched.email ? "error" : ""}`}
+                  id="email"
+                  className={`${errors.email && touched.email ? "error" : ""}`}
                   type="email"
                   name="email"
                   placeholder="e.g. mimoun123@gmail.com"
@@ -95,7 +97,8 @@ const FormStep1 = () => {
                   />
                 </div>
                 <input
-                  id={`${errors.phone && touched.phone ? "error" : ""}`}
+                  id="phone"
+                  className={`${errors.phone && touched.phone ? "error" : ""}`}
                   type="number"
                   name="phone"
                   placeholder="e.g. +32 123 45 67 89"
