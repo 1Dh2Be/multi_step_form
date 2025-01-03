@@ -6,9 +6,8 @@ import bgSidebarMobile from "../assets/images/bg-sidebar-mobile.svg";
 import bgSidebarDesktop from "../assets/images/bg-sidebar-desktop.svg";
 
 // Library/Component imports here
-import { Outlet, useLocation } from "react-router";
+import { Outlet } from "react-router";
 import { useForm } from "../pages/FormContext";
-import { AnimatePresence, motion } from "motion/react";
 
 const StepList = ({ currentStep }) => {
   return (
@@ -37,8 +36,6 @@ const StepList = ({ currentStep }) => {
 const RootFormLayout = () => {
   const { currentStep } = useForm();
 
-  const location = useLocation();
-
   return (
     <div className="form__bg">
       <div className="form">
@@ -56,11 +53,9 @@ const RootFormLayout = () => {
             <StepList currentStep={currentStep} />
           </aside>
 
-          <AnimatePresence mode="wait">
-            <motion.main className="form-content" key={location.pathname}>
-              <Outlet />
-            </motion.main>
-          </AnimatePresence>
+          <main className="form-content" key={location.pathname}>
+            <Outlet />
+          </main>
         </div>
       </div>
     </div>

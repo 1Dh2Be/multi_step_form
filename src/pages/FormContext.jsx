@@ -88,7 +88,7 @@ export const FormProvider = ({ children }) => {
 
   const [isChecked, setIsChecked] = useState(() => {
     const savedCheckedValue = localStorage.getItem("isChecked");
-    return savedCheckedValue ? JSON.parse(savedCheckedValue) : false;
+    return savedCheckedValue ? JSON.parse(savedCheckedValue) : true;
   });
 
   useEffect(() => {
