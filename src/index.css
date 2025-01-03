@@ -31,15 +31,17 @@ label {
   color: var(--marine-blue);
 }
 
-
 input {
   font-family: var(--font-family);
   font-size: 1rem;
   padding: 0.7em;
   border-radius: 5px;
+  outline: 1px solid var(--cool-gray);
   border: 1px solid var(--cool-gray);
 }
 
-input:hover, input:focus {
+input:hover,
+input:focus {
+  border: 1px solid var(--cool-gray);
   outline: 1px solid var(--purplish-blue);
 }

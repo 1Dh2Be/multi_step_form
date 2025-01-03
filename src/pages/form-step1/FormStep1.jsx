@@ -56,7 +56,13 @@ const FormStep1 = () => {
                 </div>
                 <input
                   id="name"
-                  className={`${errors.name && touched.name ? "error" : ""}`}
+                  className={`${
+                    errors.name && touched.name
+                      ? "error"
+                      : touched.name && !errors.name
+                      ? "valid"
+                      : ""
+                  }`}
                   type="text"
                   name="name"
                   placeholder="e.g. Mimoun"
@@ -77,7 +83,13 @@ const FormStep1 = () => {
                 </div>
                 <input
                   id="email"
-                  className={`${errors.email && touched.email ? "error" : ""}`}
+                  className={`${
+                    errors.email && touched.email
+                      ? "error"
+                      : touched.email && !errors.email
+                      ? "valid"
+                      : ""
+                  }`}
                   type="email"
                   name="email"
                   placeholder="e.g. mimoun123@gmail.com"
@@ -98,8 +110,14 @@ const FormStep1 = () => {
                 </div>
                 <input
                   id="phone"
-                  className={`${errors.phone && touched.phone ? "error" : ""}`}
-                  type="number"
+                  className={`${
+                    errors.phone && touched.phone
+                      ? "error"
+                      : touched.phone && !errors.phone
+                      ? "valid"
+                      : ""
+                  }`}
+                  type="text"
                   name="phone"
                   placeholder="e.g. +32 123 45 67 89"
                   onChange={(e) => handleInputChange(e, handleChange)}
